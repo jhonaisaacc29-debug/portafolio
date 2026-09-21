@@ -62,7 +62,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           >
             Volver a intentar
           </Button>
-          <Button asChild variant="outline"><Link to="/">Volver al inicio</Link></Button>
+          <Button asChild variant="outline">
+            <Link to="/">Volver al inicio</Link>
+          </Button>
         </div>
       </div>
     </div>
@@ -85,7 +87,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap",
+      },
       { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.png`, type: "image/png" },
     ],
   }),

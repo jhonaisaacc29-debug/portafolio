@@ -6,7 +6,7 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-const isGitHubPages = process.env['GITHUB_PAGES'] === "true";
+const isGitHubPages = process.env["GITHUB_PAGES"] === "true";
 const basepath = isGitHubPages ? "/portafolio" : "/";
 const projectPages = [
   "teranet",
@@ -23,9 +23,11 @@ export default defineConfig({
   vite: {
     base: `${basepath.replace(/\/$/, "")}/`,
   },
-  ...(isGitHubPages ? {
-    nitro: false,
-  } : {}),
+  ...(isGitHubPages
+    ? {
+        nitro: false,
+      }
+    : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this

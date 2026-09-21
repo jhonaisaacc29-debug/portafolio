@@ -22,9 +22,14 @@ export const projects: Project[] = [
     slug: "teranet",
     title: "Teranet",
     category: "Identidad visual",
-    description: "Sistema de identidad para una propuesta digital, presentado a través de marca, paleta, tipografía y aplicaciones.",
+    description:
+      "Sistema de identidad para una propuesta digital, presentado a través de marca, paleta, tipografía y aplicaciones.",
     coverImage: media("teranet-identidad.jpg"),
-    images: [media("teranet-logo.png"), media("teranet-credenciales.jpg"), media("teranet-identidad.jpg")],
+    images: [
+      media("teranet-logo.png"),
+      media("teranet-credenciales.jpg"),
+      media("teranet-identidad.jpg"),
+    ],
     tags: ["Marca", "Identidad", "Aplicaciones"],
     featured: true,
     overview: "Sistema de identidad visual desarrollado para una propuesta digital.",
@@ -34,7 +39,8 @@ export const projects: Project[] = [
     slug: "hause-acai-menu",
     title: "Ha’use Açaí — Menú",
     category: "Diseño gráfico",
-    description: "Pieza de menú comercial con información de productos, precios y canales de contacto.",
+    description:
+      "Pieza de menú comercial con información de productos, precios y canales de contacto.",
     coverImage: media("hause-acai-menu.jpg"),
     images: [media("hause-acai-menu.jpg")],
     tags: ["Publicidad", "Contenido digital"],
@@ -56,7 +62,8 @@ export const projects: Project[] = [
     slug: "serprovet-los-colonos",
     title: "Serprovet / Los Colonos",
     category: "Diseño publicitario",
-    description: "Piezas informativas y comerciales para comunicar servicios veterinarios y productos de nutrición animal.",
+    description:
+      "Piezas informativas y comerciales para comunicar servicios veterinarios y productos de nutrición animal.",
     coverImage: media("serprovet-servicios.jpeg"),
     images: [media("serprovet-servicios.jpeg"), media("serprovet-campana.jpeg")],
     tags: ["Publicidad", "Contenido digital"],
@@ -100,13 +107,22 @@ export const projects: Project[] = [
     slug: "fierro-punta",
     title: "Fierro Punta",
     category: "Identidad visual",
-    description: "Sistema visual aplicado a papelería, soporte digital, folleto, objeto promocional y publicidad exterior.",
+    description:
+      "Sistema visual aplicado a papelería, soporte digital, folleto, objeto promocional y publicidad exterior.",
     coverImage: media("fierro-punta-identidad.jpeg"),
-    images: [media("fierro-punta-identidad.jpeg"), media("fierro-punta-digital.jpeg"), media("fierro-punta-bolsa.jpeg"), media("fierro-punta-folleto.jpeg"), media("fierro-punta-carteleria.jpeg")],
+    images: [
+      media("fierro-punta-identidad.jpeg"),
+      media("fierro-punta-digital.jpeg"),
+      media("fierro-punta-bolsa.jpeg"),
+      media("fierro-punta-folleto.jpeg"),
+      media("fierro-punta-carteleria.jpeg"),
+    ],
     tags: ["Marca", "Identidad", "Aplicaciones"],
     featured: true,
-    overview: "Identidad visual de Fierro Punta presentada mediante un sistema coherente de aplicaciones físicas y digitales.",
-    concept: "Una construcción gráfica inspirada en el puente y el paisaje, reconocible en distintos formatos de comunicación.",
+    overview:
+      "Identidad visual de Fierro Punta presentada mediante un sistema coherente de aplicaciones físicas y digitales.",
+    concept:
+      "Una construcción gráfica inspirada en el puente y el paisaje, reconocible en distintos formatos de comunicación.",
   },
 ];
 
