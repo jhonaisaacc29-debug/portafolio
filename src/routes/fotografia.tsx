@@ -89,9 +89,7 @@ function PhotographyPage() {
               <div>
                 <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
               </div>
-              <span>
-                {photo.category}
-              </span>
+              <span>{photo.category}</span>
             </button>
           </Reveal>
         ))}

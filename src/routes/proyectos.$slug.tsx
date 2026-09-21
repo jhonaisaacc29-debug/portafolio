@@ -44,9 +44,7 @@ function ProjectPage() {
     project.overview && { title: "Panorama", text: project.overview },
     project.concept && { title: "Concepto", text: project.concept },
     { title: "Aplicaciones", text: project.description },
-  ].filter((chapter): chapter is { title: string; text: string } =>
-    Boolean(chapter),
-  );
+  ].filter((chapter): chapter is { title: string; text: string } => Boolean(chapter));
   return (
     <main className="case-study">
       <section className="case-hero">
