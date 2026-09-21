@@ -17,6 +17,7 @@ import { Route as FotografiaRouteImport } from './routes/fotografia'
 import { Route as JhonaFotografiaRouteImport } from './routes/jhona-fotografia'
 import { Route as ProyectosRouteImport } from './routes/proyectos'
 import { Route as SobreMiRouteImport } from './routes/sobre-mi'
+import { Route as ProyectosIndexRouteImport } from './routes/proyectos.index'
 import { Route as ProyectosSlugRouteImport } from './routes/proyectos.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -59,6 +60,11 @@ const SobreMiRoute = SobreMiRouteImport.update({
   path: '/sobre-mi',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProyectosIndexRoute = ProyectosIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProyectosRoute,
+} as any)
 const ProyectosSlugRoute = ProyectosSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -75,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/proyectos': typeof ProyectosRouteWithChildren
   '/sobre-mi': typeof SobreMiRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos/': typeof ProyectosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -83,9 +90,9 @@ export interface FileRoutesByTo {
   '/diseno-grafico': typeof DisenoGraficoRoute
   '/fotografia': typeof FotografiaRoute
   '/jhona-fotografia': typeof JhonaFotografiaRoute
-  '/proyectos': typeof ProyectosRouteWithChildren
   '/sobre-mi': typeof SobreMiRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos': typeof ProyectosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +105,7 @@ export interface FileRoutesById {
   '/proyectos': typeof ProyectosRouteWithChildren
   '/sobre-mi': typeof SobreMiRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos/': typeof ProyectosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +119,7 @@ export interface FileRouteTypes {
     | '/proyectos'
     | '/sobre-mi'
     | '/proyectos/$slug'
+    | '/proyectos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -119,9 +128,9 @@ export interface FileRouteTypes {
     | '/diseno-grafico'
     | '/fotografia'
     | '/jhona-fotografia'
-    | '/proyectos'
     | '/sobre-mi'
     | '/proyectos/$slug'
+    | '/proyectos'
   id:
     | '__root__'
     | '/'
@@ -133,6 +142,7 @@ export interface FileRouteTypes {
     | '/proyectos'
     | '/sobre-mi'
     | '/proyectos/$slug'
+    | '/proyectos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -204,6 +214,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreMiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/proyectos/': {
+      id: '/proyectos/'
+      path: '/'
+      fullPath: '/proyectos/'
+      preLoaderRoute: typeof ProyectosIndexRouteImport
+      parentRoute: typeof ProyectosRoute
+    }
     '/proyectos/$slug': {
       id: '/proyectos/$slug'
       path: '/$slug'
@@ -216,10 +233,12 @@ declare module '@tanstack/react-router' {
 
 interface ProyectosRouteChildren {
   ProyectosSlugRoute: typeof ProyectosSlugRoute
+  ProyectosIndexRoute: typeof ProyectosIndexRoute
 }
 
 const ProyectosRouteChildren: ProyectosRouteChildren = {
   ProyectosSlugRoute: ProyectosSlugRoute,
+  ProyectosIndexRoute: ProyectosIndexRoute,
 }
 
 const ProyectosRouteWithChildren = ProyectosRoute._addFileChildren(
