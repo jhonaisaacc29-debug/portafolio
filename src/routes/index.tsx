@@ -1,24 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowDownRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { jhonaLogo, Placeholder } from "@/components/portfolio-shell";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head:()=>({meta:[{title:"Isaac Espinoza | Diseñador Gráfico & Fotógrafo"},{name:"description",content:"Portfolio de Isaac Espinoza, Licenciado en Diseño Gráfico y fotógrafo. Identidad visual, branding, diseño gráfico, fotografía, retoque y producción visual."},{property:"og:title",content:"Isaac Espinoza | Diseñador Gráfico & Fotógrafo"},{property:"og:description",content:"Diseño gráfico, fotografía, identidad visual y producción integral."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}],links:[{rel:"canonical",href:"/"}]}), component: Home
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+const areas=[['01','Branding','Identidad visual y construcción de marcas.','/branding'],['02','Diseño','Piezas gráficas, publicidad y contenido digital.','/diseno-grafico'],['03','Fotografía','Eventos, retratos, producto y contenido visual.','/fotografia'],['04','Postproducción','Retoque, composición y edición fotográfica.','/retoque']] as const;
+function Home(){return <main><section className="relative grid min-h-[calc(100svh-4rem)] grid-cols-1 overflow-hidden border-b border-foreground lg:grid-cols-12"><div className="relative z-10 flex flex-col justify-end px-5 py-10 lg:col-span-8 lg:px-10 lg:py-14"><div className="section-number absolute left-5 top-8 border-l-2 border-primary pl-3 lg:left-10">ISAAC ESPINOZA<br/>ARCHIVO VISUAL</div><h1 className="font-display text-[19vw] uppercase leading-[.78] lg:text-[10vw]">Diseño <span className="text-primary">+</span><br/>Fotografía</h1><p className="mt-8 max-w-xl text-lg font-medium leading-relaxed">Diseño identidades, creo imágenes y desarrollo propuestas visuales que conectan marcas, personas e historias.</p><div className="mt-8 flex flex-wrap gap-3"><Button asChild variant="editorial"><Link to="/proyectos">Ver portfolio</Link></Button><Button asChild variant="editorialOutline"><Link to="/jhona-fotografia">Conocer Jhona Fotografía</Link></Button></div></div><div className="lg:col-span-4"><Placeholder label="Retrato profesional de Isaac" className="h-full min-h-[45vh]"/></div></section>
+<section className="border-b border-foreground px-5 py-20 md:px-10"><span className="section-number">Diseño + Fotografía + Identidad</span><p className="mt-6 max-w-4xl font-display text-4xl uppercase leading-tight md:text-7xl">Mi trabajo combina diseño gráfico, fotografía y postproducción para crear soluciones visuales coherentes, atractivas y con identidad.</p></section>
+<section className="grid grid-cols-1 border-b border-foreground sm:grid-cols-2 lg:grid-cols-4">{areas.map(([n,t,d,to])=><Link to={to} key={t} className="group min-h-60 border-b border-foreground p-6 last:border-b-0 sm:border-r lg:border-b-0"><span className="section-number">{n} /</span><h2 className="mt-10 font-display text-4xl uppercase group-hover:text-primary">{t}</h2><p className="mt-3 max-w-xs text-sm">{d}</p><ArrowDownRight className="mt-8"/></Link>)}</section>
+<section className="px-5 py-20 md:px-10"><div className="mb-10 flex items-end justify-between"><div><span className="section-number">07 /</span><h2 className="mt-3 font-display text-5xl uppercase md:text-7xl">Proyectos destacados</h2></div><Link to="/proyectos" className="font-mono text-xs uppercase">Ver archivo →</Link></div><div className="grid gap-6 md:grid-cols-12"><article className="md:col-span-8"><Placeholder label="Proyecto destacado — imagen principal" className="aspect-[3/2]"/><h3 className="project-caption">Proyecto por incorporar <span>Case study</span></h3></article><article className="md:col-span-4"><Placeholder label="Proyecto destacado — imagen vertical" className="aspect-[2/3]"/><h3 className="project-caption">Proyecto por incorporar <span>Case study</span></h3></article></div></section>
+<section className="grid bg-foreground text-background md:grid-cols-2"><div className="p-8 md:p-16"><span className="font-mono text-xs uppercase text-primary">Proyecto propio</span><h2 className="mt-5 font-display text-8xl uppercase md:text-9xl">Jhona</h2><p className="mt-6 max-w-md">Proyecto propio de fotografía y producción visual: dirección creativa, identidad, fotografía, edición, diseño y presencia digital.</p><Button asChild variant="editorialOutline" className="mt-8 border-background bg-foreground text-background"><Link to="/jhona-fotografia">Ver caso de estudio</Link></Button></div><div className="grid place-items-center bg-primary p-10"><img src={jhonaLogo} alt="Logo original de Jhona Diseño y Fotografía" className="h-auto w-full max-w-lg"/></div></section></main>}
