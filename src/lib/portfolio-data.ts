@@ -34,7 +34,7 @@ export const projects: Project[] = [
     description: "Sistema de identidad para una propuesta digital, presentado a través de marca, paleta, tipografía y aplicaciones.",
     coverImage: teranetIdentityAsset.url,
     images: [teranetLogoAsset.url, teranetCredentialsAsset.url, teranetIdentityAsset.url],
-    tags: ["Branding", "Identidad", "Aplicaciones"],
+    tags: ["Marca", "Identidad", "Aplicaciones"],
     featured: true,
   },
   {
