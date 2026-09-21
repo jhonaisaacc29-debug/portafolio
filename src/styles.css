@@ -155,6 +155,18 @@
   img { display: block; }
 }
 
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity .75s ease, transform .75s cubic-bezier(.22,1,.36,1); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.hero-title { animation: title-enter .9s cubic-bezier(.22,1,.36,1) both; }
+.hero-portrait { animation: portrait-enter 1.1s cubic-bezier(.22,1,.36,1) both; }
+.image-reveal { animation: image-enter .9s cubic-bezier(.22,1,.36,1) both; }
+.marquee { overflow: hidden; }
+.marquee-track { display: flex; width: max-content; animation: marquee 24s linear infinite; }
+@keyframes title-enter { from { opacity: 0; transform: translateY(42px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes portrait-enter { from { opacity: 0; transform: scale(1.05); } to { transform: scale(1); } }
+@keyframes image-enter { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
 @utility section-number { font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; color: var(--color-primary); }
 @utility placeholder-frame { display:grid; place-items:center; overflow:hidden; border:1px solid var(--color-foreground); background:repeating-linear-gradient(135deg,var(--color-background),var(--color-background) 14px,var(--color-border) 15px); }
 @utility project-caption { display:flex; justify-content:space-between; gap:1rem; border-bottom:1px solid var(--color-foreground); padding:.85rem 0; font-family:var(--font-display); font-size:1.5rem; text-transform:uppercase; }
@@ -162,4 +174,4 @@
 .placeholder-frame small { display:block; color:var(--color-primary); margin-top:.2rem; }
 .project-caption span { font-family:var(--font-mono); font-size:.6rem; align-self:center; }
 .bg-hero-wash { background: linear-gradient(to top, var(--color-foreground) 5%, transparent 75%); }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } * { transition:none !important; animation:none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } * { transition:none !important; animation:none !important; } .reveal { opacity:1; transform:none; } }
