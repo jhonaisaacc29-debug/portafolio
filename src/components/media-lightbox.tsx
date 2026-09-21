@@ -25,8 +25,12 @@ export function MediaLightbox({
     closeRef.current?.focus();
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose();
-      if (event.key === "ArrowLeft") previous();
-      if (event.key === "ArrowRight") next();
+      if (event.key === "ArrowLeft") {
+        setIndex((current) => (current - 1 + images.length) % images.length);
+      }
+      if (event.key === "ArrowRight") {
+        setIndex((current) => (current + 1) % images.length);
+      }
     };
     window.addEventListener("keydown", handleKey);
     return () => {
