@@ -11,8 +11,8 @@
 
 # Ajustes de contenido solicitados
 
-- [ ] Mostrar Fierro Punta primero y Teranet segundo
-- [ ] Eliminar toda numeración visible
-- [ ] Retirar completamente el material de Serprovet
-- [ ] Incorporar los dos archivos adjuntos que faltaban
-- [ ] Verificar las páginas afectadas en escritorio y móvil
+- [x] Mostrar Fierro Punta primero y Teranet segundo
+- [x] Eliminar toda numeración visible
+- [x] Retirar completamente el material de Serprovet
+- [x] Incorporar los dos archivos adjuntos que faltaban
+- [x] Verificar las páginas afectadas en escritorio y móvil
