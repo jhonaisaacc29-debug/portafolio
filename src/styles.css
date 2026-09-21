@@ -151,6 +151,7 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   a,
   button {
@@ -168,7 +169,18 @@
   }
   img {
     display: block;
+    max-width: 100%;
   }
+}
+
+main,
+section,
+article,
+header,
+footer,
+nav,
+div {
+  min-width: 0;
 }
 
 .reveal {
@@ -404,6 +416,9 @@
   overflow: hidden;
   background: var(--color-muted);
 }
+.editorial-project {
+  min-width: 0;
+}
 .editorial-project-media img {
   width: 100%;
   height: 100%;
@@ -422,11 +437,15 @@
   gap: 1rem;
   padding-top: 1.15rem;
 }
+.editorial-project-meta > div {
+  min-width: 0;
+}
 .editorial-project-meta h2 {
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 3vw, 3rem);
   line-height: 0.95;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 .editorial-project-meta p {
   margin-top: 0.35rem;
@@ -1076,7 +1095,8 @@
   }
   .editorial-hero-copy h1 {
     margin-top: 2.5rem;
-    font-size: clamp(3.7rem, 18vw, 5.4rem);
+    font-size: clamp(3.1rem, 16vw, 4.8rem);
+    line-height: 0.94;
   }
   .editorial-role {
     grid-template-columns: 1fr;
@@ -1100,16 +1120,33 @@
     grid-template-columns: 1fr;
   }
   .editorial-section-heading h2 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 12vw, 3rem);
+    line-height: 0.98;
   }
   .editorial-project-meta {
     grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 0.75rem;
+    padding-top: 1rem;
+  }
+  .editorial-project-meta h2 {
+    font-size: clamp(1.65rem, 8vw, 2.2rem);
+    line-height: 1.05;
+  }
+  .editorial-project-meta p {
+    margin-top: 0.5rem;
+    line-height: 1.4;
   }
   .editorial-project-line {
     display: none;
   }
   .jhona-transition > div:last-child {
     min-height: 24rem;
+  }
+  .jhona-transition h2 {
+    font-size: clamp(3rem, 15vw, 4rem);
+    line-height: 0.94;
+    overflow-wrap: break-word;
   }
   .archive-intro,
   .design-intro,
@@ -1119,7 +1156,9 @@
   .archive-intro h1,
   .design-intro h1,
   .cv-intro h1 {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 15vw, 3.5rem);
+    line-height: 0.94;
+    overflow-wrap: break-word;
   }
   .archive-intro > div {
     display: block;
@@ -1143,6 +1182,17 @@
   .design-wall > .reveal {
     margin: 0 0 4rem;
   }
+  .design-wall > .design-piece-tall,
+  .photo-sequence > .photo-portrait,
+  .case-gallery > div > .case-image-small,
+  .jhona-gallery > .jhona-tall {
+    margin-top: 0;
+  }
+  .design-wall p {
+    display: grid;
+    gap: 0.4rem;
+    line-height: 1.4;
+  }
   .design-categories {
     gap: 0.55rem 1rem;
     padding-inline: 1.25rem;
@@ -1156,10 +1206,11 @@
     align-items: stretch;
   }
   .photo-intro h1 {
-    font-size: clamp(3.75rem, 17vw, 5rem);
+    font-size: clamp(3.1rem, 15vw, 4.75rem);
+    line-height: 0.94;
   }
   .photo-cover {
-    height: 62svh;
+    height: clamp(22rem, 62svh, 38rem);
   }
   .photo-filters {
     top: 4rem;
@@ -1178,21 +1229,33 @@
     flex-direction: column;
   }
   .case-heading {
-    min-height: 70svh;
+    min-height: auto;
+    gap: 3rem;
     padding: 2rem 1.25rem;
   }
   .case-heading h1 {
-    font-size: clamp(3.3rem, 16vw, 5rem);
+    font-size: clamp(2.7rem, 12vw, 4rem);
+    line-height: 0.98;
+    overflow-wrap: break-word;
+  }
+  .case-meta {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr));
+    gap: 1rem 0.75rem;
   }
   .case-cover {
     min-height: 55svh;
   }
   .case-chapters article {
-    grid-template-columns: 2.5rem 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   .case-chapters article p {
-    grid-column: 2;
+    grid-column: auto;
+  }
+  .case-chapters h2 {
+    font-size: clamp(2.35rem, 12vw, 3.5rem);
+    line-height: 1;
+    overflow-wrap: break-word;
   }
   .case-gallery header {
     grid-template-columns: 1fr;
@@ -1212,10 +1275,11 @@
     align-items: stretch;
   }
   .about-hero h1 {
-    font-size: clamp(3.8rem, 18vw, 5.2rem);
+    font-size: clamp(3.1rem, 16vw, 4.8rem);
+    line-height: 0.94;
   }
   .about-hero > div:last-child {
-    height: 65svh;
+    height: clamp(24rem, 65svh, 42rem);
   }
   .about-statement,
   .about-timeline {
@@ -1233,7 +1297,8 @@
     padding: 4rem 1.25rem;
   }
   .jhona-hero h1 {
-    font-size: 3.8rem;
+    font-size: clamp(3rem, 15vw, 3.8rem);
+    line-height: 0.94;
   }
   .jhona-hero > div:last-child {
     min-height: 26rem;
@@ -1257,7 +1322,8 @@
     grid-template-columns: 1fr auto;
   }
   .contact-hero h1 {
-    font-size: clamp(3.75rem, 18vw, 5.25rem);
+    font-size: clamp(3.1rem, 16vw, 4.75rem);
+    line-height: 0.94;
   }
 }
 @media (min-width: 768px) and (max-width: 1100px) {
