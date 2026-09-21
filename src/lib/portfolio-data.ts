@@ -7,6 +7,9 @@ import amAsesoriaAsset from "@/assets/am-asesoria.png.asset.json";
 import wiipandAsset from "@/assets/wiipand.png.asset.json";
 import hauseAcaiAsset from "@/assets/hause-acai-menu.jpg.asset.json";
 import nandekueteAsset from "@/assets/nandekuete.jpg.asset.json";
+import serprovetServicesAsset from "@/assets/serprovet-servicios.jpeg.asset.json";
+import serprovetCampaignAsset from "@/assets/serprovet-campana.jpeg.asset.json";
+import shakiraAsset from "@/assets/3av-shakira.jpeg.asset.json";
 
 export type Project = {
   slug: string;
@@ -50,8 +53,18 @@ export const projects: Project[] = [
     category: "Diseño impreso",
     description: "Tarjeta informativa para un servicio de traslados.",
     coverImage: terceraAvenidaAsset.url,
-    images: [terceraAvenidaAsset.url],
+    images: [terceraAvenidaAsset.url, shakiraAsset.url],
     tags: ["Impresos", "Pieza gráfica"],
+    featured: true,
+  },
+  {
+    slug: "serprovet-los-colonos",
+    title: "Serprovet / Los Colonos",
+    category: "Diseño publicitario",
+    description: "Piezas informativas y comerciales para comunicar servicios veterinarios y productos de nutrición animal.",
+    coverImage: serprovetServicesAsset.url,
+    images: [serprovetServicesAsset.url, serprovetCampaignAsset.url],
+    tags: ["Publicidad", "Contenido digital"],
     featured: true,
   },
   {

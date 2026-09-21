@@ -6,3 +6,7 @@
 - [x] Añadir galería ampliable y comparador antes/después
 - [x] Validar navegación, legibilidad y proporciones en desktop y mobile
 - [x] Corregir errores detectados y confirmar metadatos por página
+- [ ] Incorporar el CV actualizado y habilitar su descarga
+- [ ] Integrar las nuevas piezas reales con visualización ampliada
+- [ ] Añadir movimiento editorial y traducir todo al español
+- [ ] Revisar el resultado final en escritorio y móvil
