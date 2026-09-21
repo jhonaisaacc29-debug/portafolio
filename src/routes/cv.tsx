@@ -68,7 +68,7 @@ function CvPage() {
     <main>
       <section className="cv-intro">
         <div>
-          <span className="section-number">05 / Currículum</span>
+          <span className="section-number">Currículum</span>
           <h1>
             Experiencia
             <br />

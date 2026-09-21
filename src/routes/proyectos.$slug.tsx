@@ -41,10 +41,10 @@ function ProjectPage() {
   const project = Route.useLoaderData();
   const [active, setActive] = useState<number | null>(null);
   const chapters = [
-    project.overview && { number: "01", title: "Panorama", text: project.overview },
-    project.concept && { number: "02", title: "Concepto", text: project.concept },
-    { number: project.concept ? "03" : "02", title: "Aplicaciones", text: project.description },
-  ].filter((chapter): chapter is { number: string; title: string; text: string } =>
+    project.overview && { title: "Panorama", text: project.overview },
+    project.concept && { title: "Concepto", text: project.concept },
+    { title: "Aplicaciones", text: project.description },
+  ].filter((chapter): chapter is { title: string; text: string } =>
     Boolean(chapter),
   );
   return (
@@ -90,7 +90,6 @@ function ProjectPage() {
         {chapters.map((chapter) => (
           <Reveal key={chapter.title}>
             <article>
-              <span>{chapter.number}</span>
               <h2>{chapter.title}</h2>
               <p>{chapter.text}</p>
             </article>
@@ -99,9 +98,7 @@ function ProjectPage() {
       </section>
       <section className="case-gallery">
         <header>
-          <span className="section-number">
-            {String(chapters.length + 1).padStart(2, "0")} / Resultado final
-          </span>
+          <span className="section-number">Resultado final</span>
           <h2>Galería visual</h2>
           <p>Las piezas finales proporcionadas, presentadas sin alterar su proporción.</p>
         </header>
@@ -125,7 +122,6 @@ function ProjectPage() {
                   loading="lazy"
                   decoding="async"
                 />
-                <span>{String(index + 1).padStart(2, "0")}</span>
               </button>
             </Reveal>
           ))}

@@ -2,14 +2,9 @@ import { media } from "@/lib/media";
 
 export const newDesignPieces = [
   {
-    image: media("serprovet-servicios.jpeg"),
-    title: "Serprovet / Los Colonos",
-    category: "Pieza informativa",
-  },
-  {
-    image: media("serprovet-campana.jpeg"),
-    title: "Serprovet / Los Colonos",
-    category: "Comunicación comercial",
+    image: media("botella-personalizada.png"),
+    title: "Botella personalizada",
+    category: "Composición visual",
   },
   { image: media("3av-shakira.jpeg"), title: "3AV. Traslados", category: "Publicidad digital" },
   {

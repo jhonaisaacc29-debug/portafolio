@@ -8,3 +8,11 @@
 - [x] Eliminar código, recursos y dependencias realmente no usados
 - [x] Preparar instalación, build y publicación bajo `/portafolio/`
 - [x] Verificar rutas, enlaces, imágenes y consola en cuatro tamaños
+
+# Ajustes de contenido solicitados
+
+- [ ] Mostrar Fierro Punta primero y Teranet segundo
+- [ ] Eliminar toda numeración visible
+- [ ] Retirar completamente el material de Serprovet
+- [ ] Incorporar los dos archivos adjuntos que faltaban
+- [ ] Verificar las páginas afectadas en escritorio y móvil

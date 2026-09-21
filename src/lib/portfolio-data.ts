@@ -19,6 +19,27 @@ export const isaacProfile = media("isaac-perfil.jpeg");
 
 export const projects: Project[] = [
   {
+    slug: "fierro-punta",
+    title: "Fierro Punta",
+    category: "Identidad visual",
+    description:
+      "Sistema visual aplicado a papelería, soporte digital, folleto, objeto promocional y publicidad exterior.",
+    coverImage: media("fierro-punta-identidad.jpeg"),
+    images: [
+      media("fierro-punta-identidad.jpeg"),
+      media("fierro-punta-digital.jpeg"),
+      media("fierro-punta-bolsa.jpeg"),
+      media("fierro-punta-folleto.jpeg"),
+      media("fierro-punta-carteleria.jpeg"),
+    ],
+    tags: ["Marca", "Identidad", "Aplicaciones"],
+    featured: true,
+    overview:
+      "Identidad visual de Fierro Punta presentada mediante un sistema coherente de aplicaciones físicas y digitales.",
+    concept:
+      "Una construcción gráfica inspirada en el puente y el paisaje, reconocible en distintos formatos de comunicación.",
+  },
+  {
     slug: "teranet",
     title: "Teranet",
     category: "Identidad visual",
@@ -59,18 +80,6 @@ export const projects: Project[] = [
     overview: "Piezas informativas y publicitarias para un servicio de traslados.",
   },
   {
-    slug: "serprovet-los-colonos",
-    title: "Serprovet / Los Colonos",
-    category: "Diseño publicitario",
-    description:
-      "Piezas informativas y comerciales para comunicar servicios veterinarios y productos de nutrición animal.",
-    coverImage: media("serprovet-servicios.jpeg"),
-    images: [media("serprovet-servicios.jpeg"), media("serprovet-campana.jpeg")],
-    tags: ["Publicidad", "Contenido digital"],
-    featured: true,
-    overview: "Comunicación visual aplicada a servicios veterinarios y nutrición animal.",
-  },
-  {
     slug: "am-asesoria-consultoria",
     title: "A&M Asesoría Consultoría",
     category: "Diseño impreso",
@@ -102,27 +111,6 @@ export const projects: Project[] = [
     tags: ["Gift card", "Impresos"],
     featured: true,
     overview: "Gift card diseñada como extensión de la identidad visual de la barbería.",
-  },
-  {
-    slug: "fierro-punta",
-    title: "Fierro Punta",
-    category: "Identidad visual",
-    description:
-      "Sistema visual aplicado a papelería, soporte digital, folleto, objeto promocional y publicidad exterior.",
-    coverImage: media("fierro-punta-identidad.jpeg"),
-    images: [
-      media("fierro-punta-identidad.jpeg"),
-      media("fierro-punta-digital.jpeg"),
-      media("fierro-punta-bolsa.jpeg"),
-      media("fierro-punta-folleto.jpeg"),
-      media("fierro-punta-carteleria.jpeg"),
-    ],
-    tags: ["Marca", "Identidad", "Aplicaciones"],
-    featured: true,
-    overview:
-      "Identidad visual de Fierro Punta presentada mediante un sistema coherente de aplicaciones físicas y digitales.",
-    concept:
-      "Una construcción gráfica inspirada en el puente y el paisaje, reconocible en distintos formatos de comunicación.",
   },
 ];
 

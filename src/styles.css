@@ -362,15 +362,6 @@
 .editorial-portrait:hover img {
   transform: scale(1.025);
 }
-.editorial-portrait span {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  padding: 0.5rem;
-  background: var(--color-background);
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-}
 .editorial-scroll {
   position: absolute;
   right: 1.25rem;
@@ -423,18 +414,6 @@
 }
 .editorial-project:hover img {
   transform: scale(1.025);
-}
-.editorial-project-index {
-  position: absolute;
-  top: 0.8rem;
-  left: 0.8rem;
-  display: grid;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
-  background: var(--color-background);
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
 }
 .editorial-project-meta {
   display: grid;
@@ -784,15 +763,10 @@
 }
 .case-chapters article {
   display: grid;
-  grid-template-columns: 5rem 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   border-top: 1px solid var(--color-foreground);
   padding: 2rem 0 4rem;
-}
-.case-chapters article > span {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--color-primary);
 }
 .case-chapters h2 {
   font-family: var(--font-display);
@@ -853,12 +827,6 @@
   max-height: 90svh;
   object-fit: contain;
   background: var(--color-muted);
-}
-.case-gallery button span {
-  display: block;
-  margin-top: 0.7rem;
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
 }
 
 .about-hero {
@@ -1028,7 +996,7 @@
 }
 .jhona-phases > div {
   display: grid;
-  grid-template-columns: 5rem 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
   border-top: 1px solid var(--color-foreground);
   padding: 1.25rem 0;
@@ -1286,7 +1254,7 @@
     padding: 0 1.25rem 6rem;
   }
   .jhona-phases > div {
-    grid-template-columns: 2.5rem 1fr auto;
+    grid-template-columns: 1fr auto;
   }
   .contact-hero h1 {
     font-size: clamp(3.75rem, 18vw, 5.25rem);

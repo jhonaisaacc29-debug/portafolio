@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 import { jhonaLogo } from "@/lib/media";
 const links = [
   ["Inicio", "/"],
@@ -21,14 +21,13 @@ export function SiteHeader() {
           Isaac Espinoza<span className="text-primary">.</span>
         </Link>
         <nav className="hidden items-center gap-6 font-mono text-[9px] uppercase lg:flex">
-          {links.map(([label, to], index) => (
+          {links.map(([label, to]) => (
             <Link
               key={to}
               to={to}
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: to === "/" }}
             >
-              <span className="mr-1 text-muted-foreground">0{index + 1}</span>
               {label}
             </Link>
           ))}
@@ -45,41 +44,21 @@ export function SiteHeader() {
       </div>
       {open && (
         <nav className="h-[calc(100svh-4rem)] overflow-y-auto border-t border-border bg-background px-5 py-6 font-display text-[clamp(1.9rem,9vw,3.5rem)] uppercase leading-none lg:hidden">
-          {links.map(([label, to], index) => (
+          {links.map(([label, to]) => (
             <Link
               key={to}
               to={to}
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: to === "/" }}
               onClick={() => setOpen(false)}
-              className="grid grid-cols-[2rem_minmax(0,1fr)] border-b border-border py-3"
+              className="block border-b border-border py-3"
             >
-              <span className="font-mono text-[9px] text-primary">0{index + 1}</span>
               <span className="min-w-0">{label}</span>
             </Link>
           ))}
         </nav>
       )}
     </header>
-  );
-}
-export function PageIntro({
-  number,
-  title,
-  children,
-}: {
-  number: string;
-  title: string;
-  children: ReactNode;
-}) {
-  return (
-    <section className="page-intro border-b border-foreground px-5 py-16 md:px-10 md:py-24">
-      <span className="section-number animate-fade-in">{number} /</span>
-      <h1 className="mt-5 max-w-6xl animate-fade-in font-display text-6xl uppercase leading-[.9] md:text-9xl">
-        {title}
-      </h1>
-      <div className="mt-8 max-w-2xl animate-fade-in text-lg leading-relaxed">{children}</div>
-    </section>
   );
 }
 export function SiteFooter() {

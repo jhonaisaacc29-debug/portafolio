@@ -9,14 +9,13 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 const isGitHubPages = process.env["GITHUB_PAGES"] === "true";
 const basepath = isGitHubPages ? "/portafolio" : "/";
 const projectPages = [
+  "fierro-punta",
   "teranet",
   "hause-acai-menu",
   "tercera-avenida-traslados",
-  "serprovet-los-colonos",
   "am-asesoria-consultoria",
   "wiipand",
   "nandekuete-barberia",
-  "fierro-punta",
 ].map((slug) => ({ path: `/proyectos/${slug}` }));
 
 export default defineConfig({

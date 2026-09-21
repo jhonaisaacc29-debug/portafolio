@@ -39,7 +39,6 @@ export function EditorialProject({
             loading={index > 1 ? "lazy" : "eager"}
             decoding="async"
           />
-          <span className="editorial-project-index">{String(index + 1).padStart(2, "0")}</span>
         </div>
         <div className="editorial-project-meta">
           <div>

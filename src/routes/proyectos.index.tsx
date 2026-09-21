@@ -35,7 +35,7 @@ function Page() {
   return (
     <main>
       <section className="archive-intro">
-        <span className="section-number">01 / Archivo</span>
+        <span className="section-number">Archivo</span>
         <h1>
           Proyectos
           <br />
@@ -46,7 +46,7 @@ function Page() {
             Identidad visual, piezas impresas y comunicación comercial presentadas con el material
             real disponible.
           </p>
-          <span>{String(projects.length).padStart(2, "0")} proyectos</span>
+          <span>Selección de proyectos</span>
         </div>
       </section>
       <section className="grid items-start gap-x-7 gap-y-24 px-5 py-24 md:grid-cols-12 md:px-10 md:py-36">
