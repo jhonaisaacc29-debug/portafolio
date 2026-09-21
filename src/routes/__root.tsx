@@ -9,6 +9,8 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import { SiteFooter, SiteHeader } from "../components/portfolio-shell";
+const baseUrl = import.meta.env.BASE_URL;
+
 import { Button } from "../components/ui/button";
 
 import appCss from "../styles.css?url";
@@ -91,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
-      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.png`, type: "image/png" },
+      { rel: "icon", href: `${baseUrl}favicon.png`, type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
