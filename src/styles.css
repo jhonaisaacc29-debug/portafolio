@@ -151,6 +151,8 @@
   html { scroll-behavior: smooth; }
   a, button { transition: color .2s ease, background-color .2s ease, opacity .2s ease; }
   a:hover { color: var(--color-primary); }
+  ::selection { background: var(--color-primary); color: var(--color-primary-foreground); }
+  img { display: block; }
 }
 
 @utility section-number { font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; color: var(--color-primary); }
@@ -159,4 +161,5 @@
 .placeholder-frame span { background:var(--color-background); border:1px solid var(--color-foreground); padding:.7rem 1rem; font-family:var(--font-mono); font-size:.65rem; text-transform:uppercase; text-align:center; }
 .placeholder-frame small { display:block; color:var(--color-primary); margin-top:.2rem; }
 .project-caption span { font-family:var(--font-mono); font-size:.6rem; align-self:center; }
+.bg-hero-wash { background: linear-gradient(to top, var(--color-foreground) 5%, transparent 75%); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } * { transition:none !important; animation:none !important; } }
