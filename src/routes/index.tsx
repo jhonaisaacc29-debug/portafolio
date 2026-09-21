@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import { jhonaLogo } from "@/components/portfolio-shell";
+import { jhonaLogo } from "@/lib/media";
 import { isaacProfile, projects } from "@/lib/portfolio-data";
 import { Reveal } from "@/components/reveal";
 import { EditorialProject } from "@/components/editorial-project";

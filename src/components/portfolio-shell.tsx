@@ -1,9 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
-import { media } from "@/lib/media";
-
-export const jhonaLogo = media("logojhona-actual.jpeg");
+import { jhonaLogo } from "@/lib/media";
 const links = [
   ["Inicio", "/"],
   ["Proyectos", "/proyectos"],

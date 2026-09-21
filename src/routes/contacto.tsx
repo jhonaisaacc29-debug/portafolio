@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { jhonaLogo } from "@/components/portfolio-shell";
+import { jhonaLogo } from "@/lib/media";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({

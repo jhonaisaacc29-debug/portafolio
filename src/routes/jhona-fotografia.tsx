@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
-import { jhonaLogo } from "@/components/portfolio-shell";
+import { jhonaLogo } from "@/lib/media";
 import { Button } from "@/components/ui/button";
 import { photography } from "@/lib/photo-data";
 import { Reveal } from "@/components/reveal";
