@@ -22,6 +22,8 @@ export type Project = {
   images: string[];
   tags: string[];
   featured: boolean;
+  overview?: string;
+  concept?: string;
 };
 
 export const isaacProfile = isaacProfileAsset.url;
@@ -36,6 +38,8 @@ export const projects: Project[] = [
     images: [teranetLogoAsset.url, teranetCredentialsAsset.url, teranetIdentityAsset.url],
     tags: ["Marca", "Identidad", "Aplicaciones"],
     featured: true,
+    overview: "Sistema de identidad visual desarrollado para una propuesta digital.",
+    concept: "Una identidad organizada para comunicar tecnología, conexión y claridad.",
   },
   {
     slug: "hause-acai-menu",
@@ -46,6 +50,7 @@ export const projects: Project[] = [
     images: [hauseAcaiAsset.url],
     tags: ["Publicidad", "Contenido digital"],
     featured: true,
+    overview: "Diseño de menú comercial para presentar productos e información de compra.",
   },
   {
     slug: "tercera-avenida-traslados",
@@ -56,6 +61,7 @@ export const projects: Project[] = [
     images: [terceraAvenidaAsset.url, shakiraAsset.url],
     tags: ["Impresos", "Pieza gráfica"],
     featured: true,
+    overview: "Piezas informativas y publicitarias para un servicio de traslados.",
   },
   {
     slug: "serprovet-los-colonos",
@@ -66,6 +72,7 @@ export const projects: Project[] = [
     images: [serprovetServicesAsset.url, serprovetCampaignAsset.url],
     tags: ["Publicidad", "Contenido digital"],
     featured: true,
+    overview: "Comunicación visual aplicada a servicios veterinarios y nutrición animal.",
   },
   {
     slug: "am-asesoria-consultoria",
@@ -76,6 +83,7 @@ export const projects: Project[] = [
     images: [amAsesoriaAsset.url],
     tags: ["Identidad", "Impresos"],
     featured: false,
+    overview: "Aplicación de identidad e información profesional en soporte impreso.",
   },
   {
     slug: "wiipand",
@@ -86,6 +94,7 @@ export const projects: Project[] = [
     images: [wiipandAsset.url],
     tags: ["Identidad", "Impresos"],
     featured: false,
+    overview: "Aplicación de identidad en una pieza de contacto profesional.",
   },
   {
     slug: "nandekuete-barberia",
@@ -96,6 +105,7 @@ export const projects: Project[] = [
     images: [nandekueteAsset.url],
     tags: ["Gift card", "Impresos"],
     featured: true,
+    overview: "Gift card diseñada como extensión de la identidad visual de la barbería.",
   },
 ];
 

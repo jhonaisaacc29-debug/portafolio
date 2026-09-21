@@ -10,25 +10,19 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as BrandingRouteImport } from './routes/branding'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CvRouteImport } from './routes/cv'
 import { Route as DisenoGraficoRouteImport } from './routes/diseno-grafico'
 import { Route as FotografiaRouteImport } from './routes/fotografia'
 import { Route as JhonaFotografiaRouteImport } from './routes/jhona-fotografia'
 import { Route as ProyectosRouteImport } from './routes/proyectos'
-import { Route as RetoqueRouteImport } from './routes/retoque'
 import { Route as SobreMiRouteImport } from './routes/sobre-mi'
+import { Route as ProyectosIndexRouteImport } from './routes/proyectos.index'
 import { Route as ProyectosSlugRouteImport } from './routes/proyectos.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BrandingRoute = BrandingRouteImport.update({
-  id: '/branding',
-  path: '/branding',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactoRoute = ContactoRouteImport.update({
@@ -61,15 +55,15 @@ const ProyectosRoute = ProyectosRouteImport.update({
   path: '/proyectos',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RetoqueRoute = RetoqueRouteImport.update({
-  id: '/retoque',
-  path: '/retoque',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SobreMiRoute = SobreMiRouteImport.update({
   id: '/sobre-mi',
   path: '/sobre-mi',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ProyectosIndexRoute = ProyectosIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProyectosRoute,
 } as any)
 const ProyectosSlugRoute = ProyectosSlugRouteImport.update({
   id: '/$slug',
@@ -79,96 +73,86 @@ const ProyectosSlugRoute = ProyectosSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/branding': typeof BrandingRoute
   '/contacto': typeof ContactoRoute
   '/cv': typeof CvRoute
   '/diseno-grafico': typeof DisenoGraficoRoute
   '/fotografia': typeof FotografiaRoute
   '/jhona-fotografia': typeof JhonaFotografiaRoute
   '/proyectos': typeof ProyectosRouteWithChildren
-  '/retoque': typeof RetoqueRoute
   '/sobre-mi': typeof SobreMiRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos/': typeof ProyectosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/branding': typeof BrandingRoute
   '/contacto': typeof ContactoRoute
   '/cv': typeof CvRoute
   '/diseno-grafico': typeof DisenoGraficoRoute
   '/fotografia': typeof FotografiaRoute
   '/jhona-fotografia': typeof JhonaFotografiaRoute
-  '/proyectos': typeof ProyectosRouteWithChildren
-  '/retoque': typeof RetoqueRoute
   '/sobre-mi': typeof SobreMiRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos': typeof ProyectosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/branding': typeof BrandingRoute
   '/contacto': typeof ContactoRoute
   '/cv': typeof CvRoute
   '/diseno-grafico': typeof DisenoGraficoRoute
   '/fotografia': typeof FotografiaRoute
   '/jhona-fotografia': typeof JhonaFotografiaRoute
   '/proyectos': typeof ProyectosRouteWithChildren
-  '/retoque': typeof RetoqueRoute
   '/sobre-mi': typeof SobreMiRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos/': typeof ProyectosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/branding'
     | '/contacto'
     | '/cv'
     | '/diseno-grafico'
     | '/fotografia'
     | '/jhona-fotografia'
     | '/proyectos'
-    | '/retoque'
     | '/sobre-mi'
     | '/proyectos/$slug'
+    | '/proyectos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/branding'
     | '/contacto'
     | '/cv'
     | '/diseno-grafico'
     | '/fotografia'
     | '/jhona-fotografia'
-    | '/proyectos'
-    | '/retoque'
     | '/sobre-mi'
     | '/proyectos/$slug'
+    | '/proyectos'
   id:
     | '__root__'
     | '/'
-    | '/branding'
     | '/contacto'
     | '/cv'
     | '/diseno-grafico'
     | '/fotografia'
     | '/jhona-fotografia'
     | '/proyectos'
-    | '/retoque'
     | '/sobre-mi'
     | '/proyectos/$slug'
+    | '/proyectos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BrandingRoute: typeof BrandingRoute
   ContactoRoute: typeof ContactoRoute
   CvRoute: typeof CvRoute
   DisenoGraficoRoute: typeof DisenoGraficoRoute
   FotografiaRoute: typeof FotografiaRoute
   JhonaFotografiaRoute: typeof JhonaFotografiaRoute
   ProyectosRoute: typeof ProyectosRouteWithChildren
-  RetoqueRoute: typeof RetoqueRoute
   SobreMiRoute: typeof SobreMiRoute
 }
 
@@ -179,13 +163,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/branding': {
-      id: '/branding'
-      path: '/branding'
-      fullPath: '/branding'
-      preLoaderRoute: typeof BrandingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contacto': {
@@ -230,19 +207,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProyectosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/retoque': {
-      id: '/retoque'
-      path: '/retoque'
-      fullPath: '/retoque'
-      preLoaderRoute: typeof RetoqueRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sobre-mi': {
       id: '/sobre-mi'
       path: '/sobre-mi'
       fullPath: '/sobre-mi'
       preLoaderRoute: typeof SobreMiRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/proyectos/': {
+      id: '/proyectos/'
+      path: '/'
+      fullPath: '/proyectos/'
+      preLoaderRoute: typeof ProyectosIndexRouteImport
+      parentRoute: typeof ProyectosRoute
     }
     '/proyectos/$slug': {
       id: '/proyectos/$slug'
@@ -256,10 +233,12 @@ declare module '@tanstack/react-router' {
 
 interface ProyectosRouteChildren {
   ProyectosSlugRoute: typeof ProyectosSlugRoute
+  ProyectosIndexRoute: typeof ProyectosIndexRoute
 }
 
 const ProyectosRouteChildren: ProyectosRouteChildren = {
   ProyectosSlugRoute: ProyectosSlugRoute,
+  ProyectosIndexRoute: ProyectosIndexRoute,
 }
 
 const ProyectosRouteWithChildren = ProyectosRoute._addFileChildren(
@@ -268,14 +247,12 @@ const ProyectosRouteWithChildren = ProyectosRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BrandingRoute: BrandingRoute,
   ContactoRoute: ContactoRoute,
   CvRoute: CvRoute,
   DisenoGraficoRoute: DisenoGraficoRoute,
   FotografiaRoute: FotografiaRoute,
   JhonaFotografiaRoute: JhonaFotografiaRoute,
   ProyectosRoute: ProyectosRouteWithChildren,
-  RetoqueRoute: RetoqueRoute,
   SobreMiRoute: SobreMiRoute,
 }
 export const routeTree = rootRouteImport
