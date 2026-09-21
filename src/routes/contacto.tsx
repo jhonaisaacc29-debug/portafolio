@@ -18,14 +18,14 @@ export const Route = createFileRoute("/contacto")({
 function ContactPage(){
   return (
     <main>
-      <section className="bg-foreground px-5 py-20 text-background md:px-10 md:py-28">
+      <section className="contact-hero">
         <span className="font-mono text-[10px] uppercase text-primary">07 / Contacto</span>
-        <h1 className="mt-8 font-display text-[clamp(4.8rem,14vw,12rem)] uppercase leading-[.78]">
+        <h1>
           Creemos<br/>algo<br/><span className="text-primary">juntos.</span>
         </h1>
       </section>
 
-      <section className="px-5 py-16 md:px-10 md:py-24">
+      <section className="px-5 py-20 md:px-10 md:py-32">
         <div className="grid gap-12 md:grid-cols-2 md:gap-20">
           <div>
             <span className="font-mono text-xs uppercase text-primary">Contacto</span>
