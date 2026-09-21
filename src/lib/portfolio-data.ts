@@ -1,15 +1,4 @@
-import isaacProfileAsset from "@/assets/isaac-perfil.jpeg.asset.json";
-import teranetLogoAsset from "@/assets/teranet-logo.png.asset.json";
-import teranetCredentialsAsset from "@/assets/teranet-credenciales.jpg.asset.json";
-import teranetIdentityAsset from "@/assets/teranet-identidad.jpg.asset.json";
-import terceraAvenidaAsset from "@/assets/tercera-avenida.png.asset.json";
-import amAsesoriaAsset from "@/assets/am-asesoria.png.asset.json";
-import wiipandAsset from "@/assets/wiipand.png.asset.json";
-import hauseAcaiAsset from "@/assets/hause-acai-menu.jpg.asset.json";
-import nandekueteAsset from "@/assets/nandekuete.jpg.asset.json";
-import serprovetServicesAsset from "@/assets/serprovet-servicios.jpeg.asset.json";
-import serprovetCampaignAsset from "@/assets/serprovet-campana.jpeg.asset.json";
-import shakiraAsset from "@/assets/3av-shakira.jpeg.asset.json";
+import { media } from "@/lib/media";
 
 export type Project = {
   slug: string;
@@ -26,16 +15,21 @@ export type Project = {
   concept?: string;
 };
 
-export const isaacProfile = isaacProfileAsset.url;
+export const isaacProfile = media("isaac-perfil.jpeg");
 
 export const projects: Project[] = [
   {
     slug: "teranet",
     title: "Teranet",
     category: "Identidad visual",
-    description: "Sistema de identidad para una propuesta digital, presentado a través de marca, paleta, tipografía y aplicaciones.",
-    coverImage: teranetIdentityAsset.url,
-    images: [teranetLogoAsset.url, teranetCredentialsAsset.url, teranetIdentityAsset.url],
+    description:
+      "Sistema de identidad para una propuesta digital, presentado a través de marca, paleta, tipografía y aplicaciones.",
+    coverImage: media("teranet-identidad.jpg"),
+    images: [
+      media("teranet-logo.png"),
+      media("teranet-credenciales.jpg"),
+      media("teranet-identidad.jpg"),
+    ],
     tags: ["Marca", "Identidad", "Aplicaciones"],
     featured: true,
     overview: "Sistema de identidad visual desarrollado para una propuesta digital.",
@@ -45,9 +39,10 @@ export const projects: Project[] = [
     slug: "hause-acai-menu",
     title: "Ha’use Açaí — Menú",
     category: "Diseño gráfico",
-    description: "Pieza de menú comercial con información de productos, precios y canales de contacto.",
-    coverImage: hauseAcaiAsset.url,
-    images: [hauseAcaiAsset.url],
+    description:
+      "Pieza de menú comercial con información de productos, precios y canales de contacto.",
+    coverImage: media("hause-acai-menu.jpg"),
+    images: [media("hause-acai-menu.jpg")],
     tags: ["Publicidad", "Contenido digital"],
     featured: true,
     overview: "Diseño de menú comercial para presentar productos e información de compra.",
@@ -57,8 +52,8 @@ export const projects: Project[] = [
     title: "3AV. Traslados",
     category: "Diseño impreso",
     description: "Tarjeta informativa para un servicio de traslados.",
-    coverImage: terceraAvenidaAsset.url,
-    images: [terceraAvenidaAsset.url, shakiraAsset.url],
+    coverImage: media("tercera-avenida.png"),
+    images: [media("tercera-avenida.png"), media("3av-shakira.jpeg")],
     tags: ["Impresos", "Pieza gráfica"],
     featured: true,
     overview: "Piezas informativas y publicitarias para un servicio de traslados.",
@@ -67,9 +62,10 @@ export const projects: Project[] = [
     slug: "serprovet-los-colonos",
     title: "Serprovet / Los Colonos",
     category: "Diseño publicitario",
-    description: "Piezas informativas y comerciales para comunicar servicios veterinarios y productos de nutrición animal.",
-    coverImage: serprovetServicesAsset.url,
-    images: [serprovetServicesAsset.url, serprovetCampaignAsset.url],
+    description:
+      "Piezas informativas y comerciales para comunicar servicios veterinarios y productos de nutrición animal.",
+    coverImage: media("serprovet-servicios.jpeg"),
+    images: [media("serprovet-servicios.jpeg"), media("serprovet-campana.jpeg")],
     tags: ["Publicidad", "Contenido digital"],
     featured: true,
     overview: "Comunicación visual aplicada a servicios veterinarios y nutrición animal.",
@@ -79,8 +75,8 @@ export const projects: Project[] = [
     title: "A&M Asesoría Consultoría",
     category: "Diseño impreso",
     description: "Tarjeta de presentación y pieza informativa de servicios.",
-    coverImage: amAsesoriaAsset.url,
-    images: [amAsesoriaAsset.url],
+    coverImage: media("am-asesoria.png"),
+    images: [media("am-asesoria.png")],
     tags: ["Identidad", "Impresos"],
     featured: false,
     overview: "Aplicación de identidad e información profesional en soporte impreso.",
@@ -90,8 +86,8 @@ export const projects: Project[] = [
     title: "Wiipand",
     category: "Diseño impreso",
     description: "Aplicación de identidad en tarjeta de presentación.",
-    coverImage: wiipandAsset.url,
-    images: [wiipandAsset.url],
+    coverImage: media("wiipand.png"),
+    images: [media("wiipand.png")],
     tags: ["Identidad", "Impresos"],
     featured: false,
     overview: "Aplicación de identidad en una pieza de contacto profesional.",
@@ -101,11 +97,32 @@ export const projects: Project[] = [
     title: "Ñandekuete Barbería",
     category: "Diseño impreso",
     description: "Diseño de gift card aplicado a la identidad de la barbería.",
-    coverImage: nandekueteAsset.url,
-    images: [nandekueteAsset.url],
+    coverImage: media("nandekuete.jpg"),
+    images: [media("nandekuete.jpg")],
     tags: ["Gift card", "Impresos"],
     featured: true,
     overview: "Gift card diseñada como extensión de la identidad visual de la barbería.",
+  },
+  {
+    slug: "fierro-punta",
+    title: "Fierro Punta",
+    category: "Identidad visual",
+    description:
+      "Sistema visual aplicado a papelería, soporte digital, folleto, objeto promocional y publicidad exterior.",
+    coverImage: media("fierro-punta-identidad.jpeg"),
+    images: [
+      media("fierro-punta-identidad.jpeg"),
+      media("fierro-punta-digital.jpeg"),
+      media("fierro-punta-bolsa.jpeg"),
+      media("fierro-punta-folleto.jpeg"),
+      media("fierro-punta-carteleria.jpeg"),
+    ],
+    tags: ["Marca", "Identidad", "Aplicaciones"],
+    featured: true,
+    overview:
+      "Identidad visual de Fierro Punta presentada mediante un sistema coherente de aplicaciones físicas y digitales.",
+    concept:
+      "Una construcción gráfica inspirada en el puente y el paisaje, reconocible en distintos formatos de comunicación.",
   },
 ];
 

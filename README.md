@@ -1,29 +1,46 @@
-# Welcome to your Lovable project
+# Portfolio de Isaac Espinoza
 
-This project was built with [Lovable](https://lovable.dev).
+Portfolio profesional de Isaac Espinoza, Licenciado en Diseño Gráfico y fotógrafo. Presenta proyectos de identidad visual, diseño gráfico, fotografía y el emprendimiento propio Jhona Fotografía.
 
-## Build with Lovable
+## Desarrollo local
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Requisitos: Node.js 20 o superior y npm.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
+npm install
 npm run dev
 ```
 
-## Built with
+La aplicación local estará disponible en la dirección indicada por Vite.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Compilación de producción
+
+```bash
+npm run build
+```
+
+## Publicación en GitHub Pages
+
+El repositorio incluye el workflow `.github/workflows/deploy-pages.yml`. Al publicar en la rama `main`, GitHub Actions:
+
+1. instala las dependencias;
+2. genera todas las páginas estáticas;
+3. aplica el base path `/portafolio/`;
+4. publica la carpeta estática `dist/client`.
+
+En GitHub, seleccionar **Settings → Pages → Source → GitHub Actions**.
+
+Para comprobar localmente esa variante:
+
+```bash
+npm run build:github
+```
+
+## Contenido y recursos
+
+- Código fuente: `src/`
+- Imágenes y CV portables: `public/media/`
+- Rutas y casos de estudio: `src/routes/`
+- Datos editoriales: `src/lib/portfolio-data.ts`, `design-data.ts` y `photo-data.ts`
+
+Los recursos están incluidos en el repositorio y no dependen de rutas locales de Lovable.
