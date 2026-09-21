@@ -11,8 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BrandingRouteImport } from './routes/branding'
+import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as DisenoGraficoRouteImport } from './routes/diseno-grafico'
+import { Route as FotografiaRouteImport } from './routes/fotografia'
+import { Route as JhonaFotografiaRouteImport } from './routes/jhona-fotografia'
 import { Route as ProyectosRouteImport } from './routes/proyectos'
+import { Route as RetoqueRouteImport } from './routes/retoque'
 import { Route as SobreMiRouteImport } from './routes/sobre-mi'
 
 const IndexRoute = IndexRouteImport.update({
@@ -25,14 +29,34 @@ const BrandingRoute = BrandingRouteImport.update({
   path: '/branding',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DisenoGraficoRoute = DisenoGraficoRouteImport.update({
   id: '/diseno-grafico',
   path: '/diseno-grafico',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FotografiaRoute = FotografiaRouteImport.update({
+  id: '/fotografia',
+  path: '/fotografia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JhonaFotografiaRoute = JhonaFotografiaRouteImport.update({
+  id: '/jhona-fotografia',
+  path: '/jhona-fotografia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProyectosRoute = ProyectosRouteImport.update({
   id: '/proyectos',
   path: '/proyectos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RetoqueRoute = RetoqueRouteImport.update({
+  id: '/retoque',
+  path: '/retoque',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SobreMiRoute = SobreMiRouteImport.update({
@@ -44,44 +68,82 @@ const SobreMiRoute = SobreMiRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/branding': typeof BrandingRoute
+  '/contacto': typeof ContactoRoute
   '/diseno-grafico': typeof DisenoGraficoRoute
+  '/fotografia': typeof FotografiaRoute
+  '/jhona-fotografia': typeof JhonaFotografiaRoute
   '/proyectos': typeof ProyectosRoute
+  '/retoque': typeof RetoqueRoute
   '/sobre-mi': typeof SobreMiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/branding': typeof BrandingRoute
+  '/contacto': typeof ContactoRoute
   '/diseno-grafico': typeof DisenoGraficoRoute
+  '/fotografia': typeof FotografiaRoute
+  '/jhona-fotografia': typeof JhonaFotografiaRoute
   '/proyectos': typeof ProyectosRoute
+  '/retoque': typeof RetoqueRoute
   '/sobre-mi': typeof SobreMiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/branding': typeof BrandingRoute
+  '/contacto': typeof ContactoRoute
   '/diseno-grafico': typeof DisenoGraficoRoute
+  '/fotografia': typeof FotografiaRoute
+  '/jhona-fotografia': typeof JhonaFotografiaRoute
   '/proyectos': typeof ProyectosRoute
+  '/retoque': typeof RetoqueRoute
   '/sobre-mi': typeof SobreMiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/branding' | '/diseno-grafico' | '/proyectos' | '/sobre-mi'
+  fullPaths:
+    | '/'
+    | '/branding'
+    | '/contacto'
+    | '/diseno-grafico'
+    | '/fotografia'
+    | '/jhona-fotografia'
+    | '/proyectos'
+    | '/retoque'
+    | '/sobre-mi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/branding' | '/diseno-grafico' | '/proyectos' | '/sobre-mi'
+  to:
+    | '/'
+    | '/branding'
+    | '/contacto'
+    | '/diseno-grafico'
+    | '/fotografia'
+    | '/jhona-fotografia'
+    | '/proyectos'
+    | '/retoque'
+    | '/sobre-mi'
   id:
     | '__root__'
     | '/'
     | '/branding'
+    | '/contacto'
     | '/diseno-grafico'
+    | '/fotografia'
+    | '/jhona-fotografia'
     | '/proyectos'
+    | '/retoque'
     | '/sobre-mi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BrandingRoute: typeof BrandingRoute
+  ContactoRoute: typeof ContactoRoute
   DisenoGraficoRoute: typeof DisenoGraficoRoute
+  FotografiaRoute: typeof FotografiaRoute
+  JhonaFotografiaRoute: typeof JhonaFotografiaRoute
   ProyectosRoute: typeof ProyectosRoute
+  RetoqueRoute: typeof RetoqueRoute
   SobreMiRoute: typeof SobreMiRoute
 }
 
@@ -101,6 +163,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/diseno-grafico': {
       id: '/diseno-grafico'
       path: '/diseno-grafico'
@@ -108,11 +177,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DisenoGraficoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fotografia': {
+      id: '/fotografia'
+      path: '/fotografia'
+      fullPath: '/fotografia'
+      preLoaderRoute: typeof FotografiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jhona-fotografia': {
+      id: '/jhona-fotografia'
+      path: '/jhona-fotografia'
+      fullPath: '/jhona-fotografia'
+      preLoaderRoute: typeof JhonaFotografiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/proyectos': {
       id: '/proyectos'
       path: '/proyectos'
       fullPath: '/proyectos'
       preLoaderRoute: typeof ProyectosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/retoque': {
+      id: '/retoque'
+      path: '/retoque'
+      fullPath: '/retoque'
+      preLoaderRoute: typeof RetoqueRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sobre-mi': {
@@ -128,8 +218,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BrandingRoute: BrandingRoute,
+  ContactoRoute: ContactoRoute,
   DisenoGraficoRoute: DisenoGraficoRoute,
+  FotografiaRoute: FotografiaRoute,
+  JhonaFotografiaRoute: JhonaFotografiaRoute,
   ProyectosRoute: ProyectosRoute,
+  RetoqueRoute: RetoqueRoute,
   SobreMiRoute: SobreMiRoute,
 }
 export const routeTree = rootRouteImport
