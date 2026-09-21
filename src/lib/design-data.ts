@@ -1,11 +1,6 @@
 import { media } from "@/lib/media";
 
 export const newDesignPieces = [
-  {
-    image: media("botella-personalizada.png"),
-    title: "Botella personalizada",
-    category: "Composición visual",
-  },
   { image: media("3av-shakira.jpeg"), title: "3AV. Traslados", category: "Publicidad digital" },
   {
     image: media("dulces-brici.jpeg"),
