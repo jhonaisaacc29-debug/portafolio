@@ -1,9 +1,10 @@
-# Rediseño editorial
+# Revisión final para producción
 
-- [x] Reconstruir portada y navegación
-- [x] Rediseñar archivo de proyectos y diseño gráfico
-- [x] Expandir casos de estudio con capítulos verificables
-- [x] Dar una experiencia propia a fotografía
-- [x] Ajustar páginas de perfil, CV, Jhona y contacto
-- [x] Eliminar rutas con contenido pendiente
-- [x] Verificar escritorio y móvil después del ajuste de rutas y titulares
+- [ ] Integrar las diez imágenes nuevas sin recortes ni deformaciones
+- [ ] Ajustar la jerarquía tipográfica en todas las páginas
+- [ ] Mejorar composición y movimiento con reducción de movimiento respetada
+- [ ] Añadir navegación táctil al visor y revisar galerías
+- [ ] Adaptar portada, proyectos, fotografía, Jhona, CV y contacto a móvil, tablet y escritorio
+- [ ] Eliminar código, recursos y dependencias realmente no usados
+- [ ] Preparar instalación, build y publicación bajo `/portafolio/`
+- [ ] Verificar rutas, enlaces, imágenes y consola en cuatro tamaños
