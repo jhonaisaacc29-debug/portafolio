@@ -44,7 +44,7 @@ function Page() {
   return (
     <main>
       <section className="design-intro">
-        <span className="section-number">02 / Disciplina</span>
+        <span className="section-number">Disciplina</span>
         <h1>
           Diseño
           <br />

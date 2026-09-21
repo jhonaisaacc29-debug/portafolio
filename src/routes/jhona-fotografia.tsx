@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
-import { jhonaLogo } from "@/lib/media";
+import { jhonaLogo, media } from "@/lib/media";
 import { Button } from "@/components/ui/button";
 import { photography } from "@/lib/photo-data";
 import { Reveal } from "@/components/reveal";
@@ -30,7 +30,7 @@ function Page() {
     <main>
       <section className="jhona-hero">
         <div>
-          <span className="font-mono text-[10px] uppercase text-primary">06 / Proyecto propio</span>
+          <span className="font-mono text-[10px] uppercase text-primary">Proyecto propio</span>
           <h1>
             Jhona
             <br />
@@ -86,10 +86,30 @@ function Page() {
           >
             <figure>
               <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
-              <figcaption>{String(index + 1).padStart(2, "0")} / Jhona Fotografía</figcaption>
+              <figcaption>Jhona Fotografía</figcaption>
             </figure>
           </Reveal>
         ))}
+      </section>
+      <section className="grid border-y border-foreground md:grid-cols-2">
+        <div className="grid min-h-80 place-items-center bg-background p-10">
+          <img
+            src={jhonaLogo}
+            alt="Logo de Jhona Diseño y Fotografía sobre fondo claro"
+            className="max-h-72 w-full object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div className="grid min-h-80 place-items-center bg-foreground p-10">
+          <img
+            src={media("logojhona-negativo.webp")}
+            alt="Logo de Jhona Diseño y Fotografía sobre fondo oscuro"
+            className="max-h-72 w-full object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
       </section>
       <section className="jhona-capabilities">
         <div>
@@ -114,9 +134,8 @@ function Page() {
         </div>
       </section>
       <section className="jhona-phases">
-        {phases.map((x, i) => (
+        {phases.map((x) => (
           <div key={x}>
-            <span>0{i + 1}</span>
             <strong>{x}</strong>
             <span>↓</span>
           </div>

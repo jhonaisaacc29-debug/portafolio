@@ -99,9 +99,6 @@ export function MediaLightbox({
         </Button>
       )}
       <div className="absolute bottom-4 flex items-center gap-4 font-mono text-[10px] uppercase">
-        <span>
-          {String(index + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
-        </span>
         {images.length > 1 && <span className="text-background/60">Deslizá para navegar</span>}
       </div>
     </div>

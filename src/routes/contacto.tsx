@@ -25,7 +25,7 @@ function ContactPage() {
   return (
     <main>
       <section className="contact-hero">
-        <span className="font-mono text-[10px] uppercase text-primary">07 / Contacto</span>
+        <span className="font-mono text-[10px] uppercase text-primary">Contacto</span>
         <h1>
           Creemos
           <br />
@@ -48,11 +48,10 @@ function ContactPage() {
             <div className="mt-10 grid gap-5 font-mono text-xs uppercase">
               <a
                 href="mailto:jhonisaacc29@gmail.com"
-                className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:grid-cols-[auto_auto_minmax(0,1fr)] sm:gap-3"
+                className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:gap-3"
               >
-                <span className="text-primary">01</span>
                 <span>Correo electrónico</span>
-                <span className="col-span-2 min-w-0 break-all text-muted-foreground group-hover:text-primary sm:col-span-1 sm:ml-auto">
+                <span className="min-w-0 break-all text-right text-muted-foreground group-hover:text-primary">
                   jhonisaacc29@gmail.com →
                 </span>
               </a>
@@ -60,11 +59,10 @@ function ContactPage() {
                 href="https://wa.me/595982946365"
                 target="_blank"
                 rel="noreferrer"
-                className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:grid-cols-[auto_auto_minmax(0,1fr)] sm:gap-3"
+                className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:gap-3"
               >
-                <span className="text-primary">02</span>
                 <span>WhatsApp</span>
-                <span className="col-span-2 text-muted-foreground group-hover:text-primary sm:col-span-1 sm:ml-auto">
+                <span className="text-right text-muted-foreground group-hover:text-primary">
                   +595 982 946365 →
                 </span>
               </a>
@@ -72,11 +70,10 @@ function ContactPage() {
                 href="https://www.instagram.com/df_jhona/"
                 target="_blank"
                 rel="noreferrer"
-                className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:grid-cols-[auto_auto_minmax(0,1fr)] sm:gap-3"
+                className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:gap-3"
               >
-                <span className="text-primary">03</span>
                 <span>Instagram</span>
-                <span className="col-span-2 text-muted-foreground group-hover:text-primary sm:col-span-1 sm:ml-auto">
+                <span className="text-right text-muted-foreground group-hover:text-primary">
                   @df_jhona →
                 </span>
               </a>

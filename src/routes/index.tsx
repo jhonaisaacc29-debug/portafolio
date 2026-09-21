@@ -67,7 +67,6 @@ function Home() {
               alt="Retrato de Isaac Espinoza en Encarnación"
               decoding="async"
             />
-            <span>IE / 01</span>
           </div>
         </div>
         <a href="#seleccion" className="editorial-scroll">
@@ -77,7 +76,7 @@ function Home() {
       <section id="seleccion" className="px-5 py-24 md:px-10 md:py-36">
         <Reveal>
           <div className="editorial-section-heading">
-            <span className="section-number">01 / Trabajo seleccionado</span>
+            <span className="section-number">Trabajo seleccionado</span>
             <h2>Proyectos que construyen identidad.</h2>
             <Link to="/proyectos">
               Archivo completo <ArrowUpRight />
@@ -98,7 +97,7 @@ function Home() {
       </section>
       <section className="jhona-transition">
         <div>
-          <span className="section-number">02 / Proyecto propio</span>
+          <span className="section-number">Proyecto propio</span>
           <h2>
             Jhona
             <br />

@@ -26,7 +26,7 @@ function Page() {
     <main>
       <section className="about-hero">
         <div>
-          <span className="section-number">04 / Perfil</span>
+          <span className="section-number">Perfil</span>
           <h1>
             Sobre
             <br />

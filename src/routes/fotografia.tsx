@@ -34,9 +34,7 @@ function PhotographyPage() {
     <main className="bg-foreground text-background">
       <section className="photo-intro">
         <div>
-          <span className="font-mono text-[10px] uppercase text-primary">
-            03 / Mirada fotográfica
-          </span>
+          <span className="font-mono text-[10px] uppercase text-primary">Mirada fotográfica</span>
           <h1>Fotografía</h1>
           <p>
             Historias capturadas en un instante. Eventos, retratos y momentos cotidianos observados
@@ -92,7 +90,7 @@ function PhotographyPage() {
                 <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
               </div>
               <span>
-                {String(index + 1).padStart(2, "0")} / {photo.category}
+                {photo.category}
               </span>
             </button>
           </Reveal>
