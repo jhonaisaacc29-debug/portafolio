@@ -24,10 +24,7 @@ export default defineConfig({
     base: `${basepath.replace(/\/$/, "")}/`,
   },
   ...(isGitHubPages ? {
-    nitro: {
-      preset: "github-pages",
-      output: { dir: ".output-github" },
-    },
+    nitro: false,
   } : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).

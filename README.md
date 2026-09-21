@@ -26,7 +26,7 @@ El repositorio incluye el workflow `.github/workflows/deploy-pages.yml`. Al publ
 1. instala las dependencias;
 2. genera todas las páginas estáticas;
 3. aplica el base path `/portafolio/`;
-4. publica la carpeta estática generada.
+4. publica la carpeta estática `dist/client`.
 
 En GitHub, seleccionar **Settings → Pages → Source → GitHub Actions**.
 
