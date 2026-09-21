@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { jhonaLogo } from "@/components/portfolio-shell";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({ meta: [
@@ -15,18 +16,72 @@ export const Route = createFileRoute("/contacto")({
 });
 
 function ContactPage(){
-  const [error,setError]=useState("");
-  function submit(event:FormEvent<HTMLFormElement>){
-    event.preventDefault();
-    const form=new FormData(event.currentTarget);
-    const name=String(form.get("name")||"").trim();
-    const email=String(form.get("email")||"").trim();
-    const message=String(form.get("message")||"").trim();
-    if(!name||name.length>100||!/^\S+@\S+\.\S+$/.test(email)||message.length<10||message.length>1000){setError("Revisá el nombre, email y mensaje antes de continuar.");return;}
-    setError("");
-    const subject=encodeURIComponent(`Consulta de ${name}`);
-    const body=encodeURIComponent(`${message}\n\nEmail: ${email}\nWhatsApp: ${String(form.get("whatsapp")||"").slice(0,30)}\nTipo: ${String(form.get("type")||"").slice(0,80)}`);
-    window.location.href=`mailto:jhonisaacc29@gmail.com?subject=${subject}&body=${body}`;
-  }
-  return <main><section className="bg-foreground px-5 py-20 text-background md:px-10 md:py-28"><span className="font-mono text-[10px] uppercase text-primary">07 / Contacto</span><h1 className="mt-8 font-display text-[clamp(4.8rem,14vw,12rem)] uppercase leading-[.78]">Creemos<br/>algo<br/><span className="text-primary">juntos.</span></h1></section><section className="grid gap-12 px-5 py-16 md:grid-cols-2 md:px-10 md:py-24"><div><h2 className="font-display text-4xl uppercase">Isaac Espinoza</h2><p>Licenciado en Diseño Gráfico · Fotógrafo</p><p className="mt-2 text-sm text-muted-foreground">Encarnación, Paraguay</p><div className="mt-10 font-mono text-xs uppercase leading-8"><a href="mailto:jhonisaacc29@gmail.com">Correo electrónico →</a><br/><a href="https://wa.me/595982946365" target="_blank" rel="noreferrer">WhatsApp →</a><br/><a href="https://www.instagram.com/df_jhona/" target="_blank" rel="noreferrer">Instagram →</a></div></div><form onSubmit={submit} className="grid gap-5">{[["name","Nombre","text"],["email","Correo electrónico","email"],["whatsapp","WhatsApp","tel"],["type","Tipo de proyecto","text"]].map(([name,label,type])=><label key={name} className="font-mono text-xs uppercase">{label}<input name={name} type={type} maxLength={name==="email"?255:100} required={name==="name"||name==="email"} className="mt-2 h-12 w-full border-b border-foreground bg-background px-1 font-sans text-base outline-none focus:border-primary"/></label>)}<label className="font-mono text-xs uppercase">Mensaje<textarea name="message" required minLength={10} maxLength={1000} rows={5} className="mt-2 w-full border border-foreground bg-background p-3 font-sans text-base outline-none focus:border-primary"/></label>{error&&<p role="alert" className="text-sm text-primary">{error}</p>}<Button type="submit" variant="editorial" className="justify-self-start">Enviar mensaje</Button></form></section></main>;
+  return (
+    <main>
+      <section className="bg-foreground px-5 py-20 text-background md:px-10 md:py-28">
+        <span className="font-mono text-[10px] uppercase text-primary">07 / Contacto</span>
+        <h1 className="mt-8 font-display text-[clamp(4.8rem,14vw,12rem)] uppercase leading-[.78]">
+          Creemos<br/>algo<br/><span className="text-primary">juntos.</span>
+        </h1>
+      </section>
+
+      <section className="px-5 py-16 md:px-10 md:py-24">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-20">
+          <div>
+            <span className="font-mono text-xs uppercase text-primary">Contacto</span>
+            <h2 className="mt-4 font-display text-4xl uppercase md:text-5xl">Isaac Espinoza</h2>
+            <p className="mt-3 text-lg text-muted-foreground">Licenciado en Diseño Gráfico · Fotógrafo</p>
+            <p className="mt-2 text-sm text-muted-foreground">Encarnación, Paraguay</p>
+
+            <div className="mt-10 grid gap-5 font-mono text-xs uppercase">
+              <a href="mailto:jhonisaacc29@gmail.com" className="group flex items-center gap-3 border-b border-foreground py-4">
+                <span className="text-primary">01</span>
+                <span>Correo electrónico</span>
+                <span className="ml-auto text-muted-foreground group-hover:text-primary">jhonisaacc29@gmail.com →</span>
+              </a>
+              <a href="https://wa.me/595982946365" target="_blank" rel="noreferrer" className="group flex items-center gap-3 border-b border-foreground py-4">
+                <span className="text-primary">02</span>
+                <span>WhatsApp</span>
+                <span className="ml-auto text-muted-foreground group-hover:text-primary">+595 982 946365 →</span>
+              </a>
+              <a href="https://www.instagram.com/df_jhona/" target="_blank" rel="noreferrer" className="group flex items-center gap-3 border-b border-foreground py-4">
+                <span className="text-primary">03</span>
+                <span>Instagram</span>
+                <span className="ml-auto text-muted-foreground group-hover:text-primary">@df_jhona →</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center">
+            <p className="max-w-md text-balance font-sans text-xl text-muted-foreground md:text-2xl">
+              Hablemos y transformemos tu idea en una propuesta visual. Diseño identidad, creo imágenes y desarrollo proyectos con dirección estética coherente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-foreground px-5 py-20 text-background md:px-10 md:py-24">
+        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-center">
+          <div>
+            <span className="font-mono text-xs uppercase text-primary">Emprendimiento propio</span>
+            <h2 className="mt-4 font-display text-4xl uppercase md:text-6xl">Jhona Fotografía</h2>
+            <p className="mt-5 max-w-md text-background/70">
+              Proyecto personal de Isaac Espinoza. Fotografía, edición y producción visual para eventos, sesiones y contenido.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild variant="editorialOutline" className="border-background bg-background text-foreground">
+                <a href="https://luzohinggins.github.io/jhonafotografia/" target="_blank" rel="noreferrer">Visitar web <ExternalLink/></a>
+              </Button>
+              <Button asChild variant="editorialOutline" className="border-background bg-transparent text-background">
+                <a href="https://www.instagram.com/df_jhona/" target="_blank" rel="noreferrer">Ver Instagram <ExternalLink/></a>
+              </Button>
+            </div>
+          </div>
+          <div className="grid place-items-center bg-primary p-8">
+            <img src={jhonaLogo} alt="Logo original de Jhona Diseño y Fotografía" className="w-full max-w-xs"/>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
