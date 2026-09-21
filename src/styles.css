@@ -332,6 +332,7 @@
   .editorial-project-line { display:none; }
   .jhona-transition>div:last-child { min-height:24rem; }
   .archive-intro,.design-intro,.cv-intro { padding-block:4rem; }
+  .archive-intro h1 { font-size:3.7rem; }
   .archive-intro>div { display:block; }
   .archive-intro>div span { display:block; margin-top:2rem; }
   .design-intro,.cv-intro { grid-template-columns:1fr; }
@@ -358,6 +359,7 @@
   .about-statement,.about-timeline { grid-template-columns:1fr; gap:3rem; padding:5rem 1.25rem; }
   .jhona-hero { display:flex; min-height:auto; flex-direction:column; }
   .jhona-hero>div:first-child { min-height:70svh; padding:4rem 1.25rem; }
+  .jhona-hero h1 { font-size:4.75rem; }
   .jhona-hero>div:last-child { min-height:26rem; }
   .jhona-gallery { display:block; padding:5rem 1rem; }
   .jhona-gallery>.reveal { margin-bottom:4rem; }
