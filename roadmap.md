@@ -16,3 +16,9 @@
 - [x] Retirar completamente el material de Serprovet
 - [x] Incorporar los dos archivos adjuntos que faltaban
 - [x] Verificar las páginas afectadas en escritorio y móvil
+
+- [ ] Auditoría responsive completa en 375, 390, 414, 768, 1024, 1280 y 1440 px
+- [ ] Corregir solapamiento de proyectos en mobile sin alterar el diseño aprobado
+- [ ] Sustituir el CV por el PDF oficial adjunto y verificar descarga tras build
+- [ ] Validar enlaces, imágenes, consola, TypeScript, lint y builds local/GitHub Pages
+- [ ] Preparar entrega; commit y push dependen de los controles del entorno
