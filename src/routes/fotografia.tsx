@@ -4,7 +4,7 @@ import { PageIntro } from "@/components/portfolio-shell";
 import { MediaLightbox } from "@/components/media-lightbox";
 import { photoCategories, photography } from "@/lib/photo-data";
 
-export const Route=createFileRoute('/fotografia')({head:()=>({meta:[{title:'Fotografía | Isaac Espinoza'},{name:'description',content:'Portfolio fotográfico real de eventos, sesiones, urbano y colaciones.'},{property:'og:title',content:'Fotografía | Isaac Espinoza'},{property:'og:description',content:'Historias capturadas en un instante por Isaac Espinoza.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:PhotographyPage});
+export const Route=createFileRoute('/fotografia')({head:()=>({meta:[{title:'Fotografía | Isaac Espinoza'},{name:'description',content:'Portafolio fotográfico real de eventos, sesiones, urbano y colaciones.'},{property:'og:title',content:'Fotografía | Isaac Espinoza'},{property:'og:description',content:'Historias capturadas en un instante por Isaac Espinoza.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:PhotographyPage});
 
 function PhotographyPage(){
   const [category,setCategory]=useState("Todos");

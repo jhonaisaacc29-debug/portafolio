@@ -9,4 +9,4 @@
 - [x] Incorporar el CV actualizado y habilitar su descarga
 - [x] Integrar las nuevas piezas reales con visualización ampliada
 - [x] Añadir movimiento editorial y traducir todo al español
-- [ ] Revisar el resultado final en escritorio y móvil
+- [x] Revisar el resultado final en escritorio y móvil
