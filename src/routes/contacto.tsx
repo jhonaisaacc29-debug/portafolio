@@ -34,20 +34,20 @@ function ContactPage(){
             <p className="mt-2 text-sm text-muted-foreground">Encarnación, Paraguay</p>
 
             <div className="mt-10 grid gap-5 font-mono text-xs uppercase">
-              <a href="mailto:jhonisaacc29@gmail.com" className="group flex items-center gap-3 border-b border-foreground py-4">
+              <a href="mailto:jhonisaacc29@gmail.com" className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:grid-cols-[auto_auto_minmax(0,1fr)] sm:gap-3">
                 <span className="text-primary">01</span>
                 <span>Correo electrónico</span>
-                <span className="ml-auto text-muted-foreground group-hover:text-primary">jhonisaacc29@gmail.com →</span>
+                <span className="col-span-2 min-w-0 break-all text-muted-foreground group-hover:text-primary sm:col-span-1 sm:ml-auto">jhonisaacc29@gmail.com →</span>
               </a>
-              <a href="https://wa.me/595982946365" target="_blank" rel="noreferrer" className="group flex items-center gap-3 border-b border-foreground py-4">
+              <a href="https://wa.me/595982946365" target="_blank" rel="noreferrer" className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:grid-cols-[auto_auto_minmax(0,1fr)] sm:gap-3">
                 <span className="text-primary">02</span>
                 <span>WhatsApp</span>
-                <span className="ml-auto text-muted-foreground group-hover:text-primary">+595 982 946365 →</span>
+                <span className="col-span-2 text-muted-foreground group-hover:text-primary sm:col-span-1 sm:ml-auto">+595 982 946365 →</span>
               </a>
-              <a href="https://www.instagram.com/df_jhona/" target="_blank" rel="noreferrer" className="group flex items-center gap-3 border-b border-foreground py-4">
+              <a href="https://www.instagram.com/df_jhona/" target="_blank" rel="noreferrer" className="group grid min-w-0 grid-cols-[auto_minmax(0,1fr)] gap-2 border-b border-foreground py-4 sm:grid-cols-[auto_auto_minmax(0,1fr)] sm:gap-3">
                 <span className="text-primary">03</span>
                 <span>Instagram</span>
-                <span className="ml-auto text-muted-foreground group-hover:text-primary">@df_jhona →</span>
+                <span className="col-span-2 text-muted-foreground group-hover:text-primary sm:col-span-1 sm:ml-auto">@df_jhona →</span>
               </a>
             </div>
           </div>

@@ -22,7 +22,7 @@ export function EditorialProject({
     <Reveal variant="image" delay={(index % 3) * 90} className={className}>
       <Link to="/proyectos/$slug" params={{ slug: project.slug }} className="editorial-project group block">
         <div className={`editorial-project-media ${ratio}`}>
-          <img src={project.coverImage} alt={`Proyecto ${project.title}`} loading={index > 1 ? "lazy" : "eager"} />
+          <img src={project.coverImage} alt={`Proyecto ${project.title}`} loading={index > 1 ? "lazy" : "eager"} decoding="async" />
           <span className="editorial-project-index">{String(index + 1).padStart(2, "0")}</span>
         </div>
         <div className="editorial-project-meta">
