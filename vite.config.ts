@@ -37,6 +37,9 @@ export default defineConfig({
       enabled: isGitHubPages,
       crawlLinks: true,
       failOnError: true,
+      // Never prerender static assets (PDF, images): the prerenderer would
+      // rewrite them as text and corrupt the binary output.
+      filter: ({ path }: { path: string }) => !/\.(pdf|png|jpe?g|webp|svg|ico|mp4)$/i.test(path),
     },
   },
 });
